@@ -17,21 +17,19 @@ int demo(char *a, char *b) {
  strcpy(b, a);
  sprintf(s, "\n");
  sprintf(s, "hello");
- sprintf(s, "hello %s", bug);
- sprintf(s, gettext("hello %s"), bug);
+ sprintf(s, "hello %s", bug)
+ sprintf(s, gettext("hello %s"), bug)
  sprintf(s, unknown, bug);
  printf(bf, x);
  scanf("%d", &x);
  scanf("%s", s);
  scanf("%10s", s);
  scanf("%s", s);
- gets(f); // Flawfinder: ignore
+ gets(f); 
  printf("\\");
- /* Flawfinder: ignore */
+ 
  gets(f);
  gets(f);
- /* These are okay, but flawfinder version < 0.20 incorrectly used
-    the first parameter as the parameter for the format string */
  syslog(LOG_ERR,"cannot open config file (%s): %s",filename,strerror(errno))
  syslog(LOG_CRIT,"malloc() failed");
  /* But this one SHOULD trigger a warning. */
